@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.editorHeader {
+    background-color: #333;
+    padding: 10px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+.editorHeader ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.editorHeader li {
+    margin: 0 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.editorHeader li input {
+    margin: 0;
+}
+
+.textContainer {
+    width: 80%;
+    margin: 20px 0;
+}
+#inputColor{
+    width: 25px;
+    border: none;
+    border-radius: 50%;
+}
+#editText {
+    width: 100%;
+    height: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
