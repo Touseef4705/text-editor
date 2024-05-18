@@ -1,39 +1,54 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const editText = document.getElementById("editText");
-  const normal = document.getElementById("normal");
-  const bold = document.getElementById("bold");
-  const italic = document.getElementById("italic");
-  const underline = document.getElementById("underline");
-  const inputColor = document.getElementById("inputColor");
-  const noInput = document.getElementById("noInput");
+    const editText = document.getElementById('editText');
+    const normal = document.getElementById('normal');
+    const bold = document.getElementById('bold');
+    const italic = document.getElementById('italic');
+    const underline = document.getElementById('underline');
+    const inputColor = document.getElementById('inputColor');
+    const noInput = document.getElementById('noInput');
+    const fontFamily = document.getElementById('fontFamily');
 
-  normal.addEventListener("click", () => {
-      editText.style.fontWeight = "normal";
-      editText.style.fontStyle = "normal";
-      editText.style.textDecoration = "none";
-      editText.style.color = "black"
-  });
+    normal.addEventListener('click', function() {
+        editText.style.fontWeight = 'normal';
+        editText.style.fontStyle = 'normal';
+        editText.style.textDecoration = 'none';
+        editText.style.fontSize = '';
+        editText.style.color = '';
+        editText.style.fontFamily = '';
+    });
 
-  bold.addEventListener("click", () => {
-      editText.style.fontWeight = editText.style.fontWeight === "bold" ? "normal" : "bold";
-  });
+    
+    bold.addEventListener('click', function() {
+        if (editText.style.fontWeight === 'bold') {
+            editText.style.fontWeight = 'normal';
+        } else {
+            editText.style.fontWeight = 'bold';
+        }
+    });
 
-  italic.addEventListener("click", () => {
-      editText.style.fontStyle = editText.style.fontStyle === "italic" ? "normal" : "italic";
-  });
+    italic.addEventListener('click', function() {
+        if (editText.style.fontStyle === 'italic') {
+            editText.style.fontStyle = 'normal';
+        } else {
+            editText.style.fontStyle = 'italic';
+        }
+    });
 
-  underline.addEventListener("click", () => {
-      editText.style.textDecoration = editText.style.textDecoration === "underline" ? "none" : "underline";
-  });
+    underline.addEventListener('click', function() {
+        if (editText.style.textDecoration === 'underline') {
+            editText.style.textDecoration = 'none';
+        } else {
+            editText.style.textDecoration = 'underline';
+        }
+    });
 
-  inputColor.addEventListener("input", () => {
-      editText.style.color = inputColor.value;
-  });
+    inputColor.addEventListener('input', function() {
+        editText.style.color = inputColor.value;
+    })
 
-  noInput.addEventListener("input", () => {
-      const fontSize = noInput.value;
-      if (fontSize > 0) {
-          editText.style.fontSize = `${fontSize}px`;
-      }
-  });
-});
+    noInput.addEventListener('input', function() {
+        editText.style.fontSize = `${noInput.value}px`;
+    });
+
+    fontFamily.addEventListener('change', function() {
+        editText.style.fontFamily = fontFamily.value;
+    });

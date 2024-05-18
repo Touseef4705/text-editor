@@ -1,61 +1,100 @@
-body {
-    font-family: Arial, sans-serif;
+body, ul, li {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    color: #333;
+    flex-direction: column;
+    user-select: none;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    max-width: 850px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
 }
 
 .editorHeader {
-    background-color: #333;
+    background-color: #f9f9f9;
+    border-radius: 8px;
     padding: 10px;
-    width: 90%;
-    display: flex;
-    justify-content: center;
+    margin-bottom: 20px;
 }
 
 .editorHeader ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    gap: 5px;    
+    list-style: none;
+    justify-content: space-around;
     align-items: center;
-    gap: 20px;
+    padding: 0;
 }
 
 .editorHeader li {
-    margin: 0 10px;
-    color: white;
+    padding: 10px;
     cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.editorHeader li input {
-    margin: 0;
+.editorHeader li:hover {
+    background-color: #e0e0e0;
+    border-radius: 4px;
+}
+
+.editorHeader select,
+.editorHeader input {
+    padding: 8px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+.editorHeader select:focus,
+.editorHeader input:focus {
+    border-color: #007bff;
+    outline: none;
 }
 
 .textContainer {
-    width: 80%;
-    margin: 20px 0;
-}
-#inputColor{
-    width: 25px;
-    border: none;
-    border-radius: 50%;
-}
-#editText {
     width: 100%;
-    height: 300px;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
 }
-#noInput::placeholder{
-    text-align: center;
+
+.textContainer textarea {
+    width: 96%;
+    height: 300px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: none;
+    font-size: 16px;
+    line-height: 1.5;
+    transition: border-color 0.3s;
+}
+
+.textContainer textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+#bold:hover, #italic:hover, #underline:hover {
+    color: #007bff;
 }

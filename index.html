@@ -8,8 +8,20 @@
 </head>
 <body>
 
+    <h2>Text Editor App</h2>
+
+   <div class="container">
     <div class="editorHeader">
         <ul>
+            <li>
+                <select id="fontFamily">
+                    <option value="Arial">Arial</option>
+                    <option value="Courier New">Courier New</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Verdana">Verdana</option>
+                </select>
+            </li>
             <li id="normal">Normal</li>
             <li id="bold"><b>B</b></li>
             <li id="italic"><i>I</i></li>
@@ -22,6 +34,7 @@
     <div class="textContainer">
         <textarea placeholder="Edit Your Text" id="editText"></textarea>
     </div>
+   </div>
     
     <script src="app.js"></script>
 </body>
