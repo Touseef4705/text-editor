@@ -102,3 +102,8 @@ h2 {
 #bold:hover, #italic:hover, #underline:hover {
     color: #007bff;
 }
+
+.designerName p{
+    text-align: center;
+    font-size: 13px;
+}
