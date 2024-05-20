@@ -1,11 +1,11 @@
-    const editText = document.getElementById('editText');
-    const normal = document.getElementById('normal');
-    const bold = document.getElementById('bold');
-    const italic = document.getElementById('italic');
-    const underline = document.getElementById('underline');
-    const inputColor = document.getElementById('inputColor');
-    const noInput = document.getElementById('noInput');
-    const fontFamily = document.getElementById('fontFamily');
+    let editText = document.getElementById('editText');
+    let normal = document.getElementById('normal');
+    let bold = document.getElementById('bold');
+    let italic = document.getElementById('italic');
+    let underline = document.getElementById('underline');
+    let inputColor = document.getElementById('inputColor');
+    let noInput = document.getElementById('noInput');
+    let fontFamily = document.getElementById('fontFamily');
 
     normal.addEventListener('click', function() {
         editText.style.fontWeight = 'normal';
@@ -52,3 +52,16 @@
     fontFamily.addEventListener('change', function() {
         editText.style.fontFamily = fontFamily.value;
     });
+
+let btn = document.getElementById('btn')
+
+btn.addEventListener('click', function() {
+ 
+    let blob = new Blob([editText.value]);
+    
+    let url = URL.createObjectURL(blob);
+    
+    this.href = url;
+    
+    this.download = 'download.txt';
+});
